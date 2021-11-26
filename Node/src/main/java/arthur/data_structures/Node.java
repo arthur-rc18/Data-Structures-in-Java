@@ -4,6 +4,7 @@ public class Node {
     private String content;
     private Node nextNode;
 
+
     public Node(String content) {
         this.content = content;
         this.nextNode = null;
