@@ -1,28 +1,28 @@
 package arthur.data_structures;
 
-public class Node {
-    private String content;
-    private Node nextNode;
+public class Node<T> {
+    private T content;
+    private Node<T> nextNode;
 
 
-    public Node(String content) {
+    public Node(T content) {
         this.content = content;
         this.nextNode = null;
     }
 
-    public String getContent() {
+    public T getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public void setContent(T content) {
         this.content = content;
     }
 
-    public Node getNextNode() {
+    public Node<T> getNextNode() {
         return nextNode;
     }
 
-    public void setNextNode(Node nextNode) {
+    public void setNextNode(Node<T> nextNode) {
         this.nextNode = nextNode;
     }
 
