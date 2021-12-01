@@ -14,5 +14,12 @@ public class Main {
 
         System.out.println(myStack);
 
+        System.out.println(myStack.pop());
+
+        System.out.println(myStack);
+
+        System.out.println(myStack.top());
+        System.out.println(myStack);
+
     }
 }
