@@ -47,6 +47,7 @@ public class Stack {
                 break;
             }
         }
+        stringRetorno += "=============\n";
         return stringRetorno;
     }
 
