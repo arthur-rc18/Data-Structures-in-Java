@@ -31,5 +31,23 @@ public class Stack {
         return refNodeEntryStack == null ? true : false;
     }
 
+    @Override
+    public String toString(){
+        String stringRetorno = "-------------\n";
+        stringRetorno += "     Pilha\n";
+        stringRetorno += "-------------\n";
+
+        Node nodeAuxiliar = refNodeEntryStack;
+
+        while(true){
+            if(nodeAuxiliar != null){
+                stringRetorno += "[Node{data= " + nodeAuxiliar.getData() + "}]\n";
+                nodeAuxiliar = nodeAuxiliar.getNextNode();
+            } else{
+                break;
+            }
+        }
+        return stringRetorno;
+    }
 
 }
