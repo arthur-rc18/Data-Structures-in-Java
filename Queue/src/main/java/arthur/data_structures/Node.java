@@ -1,13 +1,13 @@
 package arthur.data_structures;
 
-public class Node {
-    private Object object;
-    private Node refNode;
+public class Node<T> {
+    private T object;
+    private Node<T> refNode;
 
     public Node(){
     }
 
-    public Node(Object object){
+    public Node(T object){
         this.refNode = null;
         this.object = object;
     }
@@ -16,7 +16,7 @@ public class Node {
         return object;
     }
 
-    public void setObject(Object object) {
+    public void setObject(T object) {
         this.object = object;
     }
 

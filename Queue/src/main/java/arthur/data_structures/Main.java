@@ -4,12 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Queue myQueue = new Queue();
+        Queue<String> myQueue = new Queue<>();
 
-        myQueue.enqueue(new Node("First"));
-        myQueue.enqueue(new Node("Second"));
-        myQueue.enqueue(new Node("Third"));
-        myQueue.enqueue(new Node("Fourth"));
+        myQueue.enqueue("First");
+        myQueue.enqueue("Second");
+        myQueue.enqueue("Third");
+        myQueue.enqueue("Fourth");
 
         System.out.println(myQueue);
 

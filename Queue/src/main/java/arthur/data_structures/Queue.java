@@ -1,7 +1,7 @@
 package arthur.data_structures;
 
-public class Queue {
-    private Node refEntry;
+public class Queue<T> {
+    private Node<T> refEntry;
 
     public Queue(){
         this.refEntry = null;
@@ -11,13 +11,13 @@ public class Queue {
         return this.refEntry == null? true : false;
     }
 
-    public void enqueue(Object obj){
+    public void enqueue(T obj){
         Node newNode = new Node(obj);
         newNode.setRefNode(refEntry);
         refEntry = newNode;
     }
 
-    public Object first(){
+    public T first(){
         if(!this.isEmpty()){
             Node firstNode = refEntry;
             while (true){
@@ -27,12 +27,12 @@ public class Queue {
                     break;
                 }
             }
-            return firstNode.getObject();
+            return (T) firstNode.getObject();
         }
         return null;
     }
 
-    public Object dequeue(){
+    public T dequeue(){
         if(!this.isEmpty()){
             Node firstNode = refEntry;
             Node nodeAuxiliar = refEntry;
@@ -45,7 +45,7 @@ public class Queue {
                     break;
                 }
             }
-            return firstNode.getObject();
+            return (T) firstNode.getObject();
         }
         return null;
     }
