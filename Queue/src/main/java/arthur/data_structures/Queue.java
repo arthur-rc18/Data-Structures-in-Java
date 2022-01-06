@@ -11,12 +11,13 @@ public class Queue {
         return this.refEntry == null? true : false;
     }
 
-    public void enqueue(Node newNode){
+    public void enqueue(Object obj){
+        Node newNode = new Node(obj);
         newNode.setRefNode(refEntry);
         refEntry = newNode;
     }
 
-    public Node first(){
+    public Object first(){
         if(!this.isEmpty()){
             Node firstNode = refEntry;
             while (true){
@@ -26,11 +27,12 @@ public class Queue {
                     break;
                 }
             }
+            return firstNode.getObject();
         }
         return null;
     }
 
-    public Node dequeue(){
+    public Object dequeue(){
         if(!this.isEmpty()){
             Node firstNode = refEntry;
             Node nodeAuxiliar = refEntry;
@@ -43,7 +45,7 @@ public class Queue {
                     break;
                 }
             }
-            return firstNode;
+            return firstNode.getObject();
         }
         return null;
     }
